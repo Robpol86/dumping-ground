@@ -16,6 +16,9 @@ screen -S usb0 -dm bash -c '
     set +x
     exec bash
 '
+
+# Monitor Progress
+PS4=$'\n+ ' S_COLORS=always watch -cn5 'set -x; df -h /mnt/usb0; iostat -m -y -p /dev/sdg 1 1; ps ux |grep -v grep |grep f3'
 ```
 
 The `exec bash` part causes the screen session to persist when everything is done instead of terminating and losing the
