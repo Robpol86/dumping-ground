@@ -24,6 +24,9 @@ PS4=$'\n+ ' S_COLORS=always watch -cn5 '
     iostat -m -y -p /dev/sdg 1 1
     ps ux |grep -v grep |grep f3
 '
+
+# Don't Forget to Unmount
+sudo umount /mnt/usb0
 ```
 
 The `exec bash` part causes the screen session to persist when everything is done instead of terminating and losing the
