@@ -1,6 +1,6 @@
 # Validate and Format SD Cards
 
-First create a new paritition with type `0x0c` using fdisk. Then:
+First create a new paritition with type **0x0c** using fdisk. Then:
 
 ```bash
 # Format
