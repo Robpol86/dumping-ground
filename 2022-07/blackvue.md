@@ -1,8 +1,9 @@
 # Validate and Format SD Cards
 
-First create a new paritition with type **0x0c** using fdisk. Then:
-
 ```bash
+# Partition
+sudo fdisk /dev/sdg  # Create partition with type 0x0c
+
 # Format
 sudo mkfs.vfat -F 32 -S 4096 -n BLACKVUE /dev/sdg1
 
